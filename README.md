@@ -1,4 +1,4 @@
-# ReconAI — AI Finance Controller
+# CashUP — AI Finance Controller
 ## Razorpay Buildathon 2026
 
 Multi-source financial reconciliation agent that closes the finance-ops loop across 120+ synthetic records.
