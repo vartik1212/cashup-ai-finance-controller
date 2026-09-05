@@ -17,8 +17,21 @@ from typing import List, Optional, Dict, Any, Tuple
 from fastapi import FastAPI, HTTPException, UploadFile, File, Response
 from fastapi.middleware.cors import CORSMiddleware
 import sys
+from pathlib import Path
+import types
+import logging
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
+_current_dir = Path(__file__).parent.resolve()
+_parent_dir = _current_dir.parent.resolve()
+
+for _p in [str(_parent_dir), str(_current_dir)]:
+    if _p not in sys.path:
+        sys.path.insert(0, _p)
+
+if "backend" not in sys.modules:
+    _backend_pkg = types.ModuleType("backend")
+    _backend_pkg.__path__ = [str(_current_dir)]
+    sys.modules["backend"] = _backend_pkg
 
 from backend.database.db import init_db, get_db, load_benchmark_dataset, reset_uploaded_dataset
 from backend.models.schemas import (
@@ -73,7 +86,15 @@ DATA_DIR = Path(__file__).parent.parent / "data"
 
 @app.on_event("startup")
 def startup():
-    init_db()
+    try:
+        init_db()
+    except Exception as e:
+        logging.getLogger("reconai.startup").warning(f"Database initialization warning: {e}")
+
+
+@app.get("/health")
+def root_health():
+    return {"status": "ok"}
 
 
 @app.get("/api/health")

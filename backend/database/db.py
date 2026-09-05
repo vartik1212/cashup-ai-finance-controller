@@ -13,14 +13,33 @@ from typing import Optional
 from pathlib import Path
 from contextlib import contextmanager
 
-DB_PATH = Path(__file__).parent.parent.parent / "data" / "reconai.db"
+def _resolve_db_path() -> Path:
+    if os.getenv("DATABASE_PATH"):
+        return Path(os.getenv("DATABASE_PATH"))
+    if os.getenv("VERCEL") or os.getenv("AWS_LAMBDA_FUNCTION_NAME") or os.getenv("VERCEL_ENV"):
+        return Path("/tmp/reconai.db")
+
+    default_path = Path(__file__).parent.parent.parent / "data" / "reconai.db"
+    try:
+        default_path.parent.mkdir(parents=True, exist_ok=True)
+        return default_path
+    except (OSError, PermissionError):
+        return Path("/tmp/reconai.db")
+
+DB_PATH = _resolve_db_path()
 
 
 def get_connection() -> sqlite3.Connection:
-    DB_PATH.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        DB_PATH.parent.mkdir(parents=True, exist_ok=True)
+    except (OSError, PermissionError):
+        pass
     conn = sqlite3.connect(str(DB_PATH))
     conn.row_factory = sqlite3.Row
-    conn.execute("PRAGMA journal_mode=WAL")
+    try:
+        conn.execute("PRAGMA journal_mode=WAL")
+    except Exception:
+        pass
     conn.execute("PRAGMA foreign_keys=ON")
     return conn
 
@@ -355,11 +374,23 @@ def init_db():
             conn.execute("ALTER TABLE active_dataset_source ADD COLUMN has_ground_truth INTEGER DEFAULT 0")
 
 
+def _find_data_dir() -> Path:
+    candidates = [
+        Path(__file__).parent.parent.parent / "data",
+        Path(__file__).parent.parent / "data",
+        Path(__file__).parent / "data",
+    ]
+    for c in candidates:
+        if c.exists():
+            return c
+    return candidates[0]
+
+
 def ensure_benchmark_data(conn: sqlite3.Connection):
     """Populates benchmark_* tables from data/*.csv if empty. Never mutates them afterwards."""
     count = conn.execute("SELECT COUNT(*) FROM benchmark_invoices").fetchone()[0]
     if count == 0:
-        data_dir = Path(__file__).parent.parent.parent / "data"
+        data_dir = _find_data_dir()
         import csv
 
         inv_file = data_dir / "invoices.csv"
@@ -446,7 +477,8 @@ def ensure_benchmark_data(conn: sqlite3.Connection):
                         ),
                     )
 
-    gt_file = Path(__file__).parent.parent.parent / "data" / "ground_truth.json"
+    data_dir = _find_data_dir()
+    gt_file = data_dir / "ground_truth.json"
     if gt_file.exists():
         with open(gt_file, "r", encoding="utf-8") as f:
             gt_text = f.read()
