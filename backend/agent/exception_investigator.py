@@ -29,18 +29,32 @@ import logging
 from typing import Dict, Any, Optional
 from datetime import datetime
 
-from ..database.db import get_db
-from ..models.schemas import (
-    AIExceptionAnalysis,
-    LikelyReason,
-    RiskLevel,
-    ReconciliationResult,
-)
-from .gemini_client import (
-    is_gemini_configured,
-    generate_content_with_fallback,
-    PRIMARY_MODEL,
-)
+try:
+    from database.db import get_db
+    from models.schemas import (
+        AIExceptionAnalysis,
+        LikelyReason,
+        RiskLevel,
+        ReconciliationResult,
+    )
+    from agent.gemini_client import (
+        is_gemini_configured,
+        generate_content_with_fallback,
+        PRIMARY_MODEL,
+    )
+except (ImportError, ValueError):
+    from ..database.db import get_db
+    from ..models.schemas import (
+        AIExceptionAnalysis,
+        LikelyReason,
+        RiskLevel,
+        ReconciliationResult,
+    )
+    from .gemini_client import (
+        is_gemini_configured,
+        generate_content_with_fallback,
+        PRIMARY_MODEL,
+    )
 
 logger = logging.getLogger("reconai.investigator")
 

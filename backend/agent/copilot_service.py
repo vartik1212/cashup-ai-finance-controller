@@ -16,19 +16,34 @@ import json
 from typing import Dict, List, Optional, Any
 from datetime import datetime
 
-from ..database.db import get_db
-from ..models.schemas import (
-    CopilotRequest,
-    CopilotResponse,
-    ReconciliationRun,
-    ReconciliationResult,
-    ChatMessage,
-)
-from .gemini_client import (
-    is_gemini_configured,
-    generate_content_with_fallback,
-    PRIMARY_MODEL,
-)
+try:
+    from database.db import get_db
+    from models.schemas import (
+        CopilotRequest,
+        CopilotResponse,
+        ReconciliationRun,
+        ReconciliationResult,
+        ChatMessage,
+    )
+    from agent.gemini_client import (
+        is_gemini_configured,
+        generate_content_with_fallback,
+        PRIMARY_MODEL,
+    )
+except (ImportError, ValueError):
+    from ..database.db import get_db
+    from ..models.schemas import (
+        CopilotRequest,
+        CopilotResponse,
+        ReconciliationRun,
+        ReconciliationResult,
+        ChatMessage,
+    )
+    from .gemini_client import (
+        is_gemini_configured,
+        generate_content_with_fallback,
+        PRIMARY_MODEL,
+    )
 
 
 class FinanceCopilotService:

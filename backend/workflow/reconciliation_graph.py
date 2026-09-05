@@ -17,12 +17,20 @@ from typing import Dict, List, Optional, Any, TypedDict
 
 from langgraph.graph import StateGraph, START, END
 
-from ..models.schemas import (
-    Invoice, Settlement, BankTransaction,
-    ReconciliationResult, ReconciliationRun,
-    MatchType, ReconciliationStatus, ExceptionCategory,
-    EvidenceItem, ScenarioPerformance, TraceStep,
-)
+try:
+    from models.schemas import (
+        Invoice, Settlement, BankTransaction,
+        ReconciliationResult, ReconciliationRun,
+        MatchType, ReconciliationStatus, ExceptionCategory,
+        EvidenceItem, ScenarioPerformance, TraceStep,
+    )
+except (ImportError, ValueError):
+    from ..models.schemas import (
+        Invoice, Settlement, BankTransaction,
+        ReconciliationResult, ReconciliationRun,
+        MatchType, ReconciliationStatus, ExceptionCategory,
+        EvidenceItem, ScenarioPerformance, TraceStep,
+    )
 
 
 # ---------------------------------------------------------------------------

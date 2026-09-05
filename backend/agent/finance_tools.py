@@ -10,7 +10,10 @@ from __future__ import annotations
 
 import json
 from typing import Dict, List, Optional, Any
-from ..database.db import get_db
+try:
+    from database.db import get_db
+except (ImportError, ValueError):
+    from ..database.db import get_db
 
 
 def _resolve_run_id(conn, run_id: Optional[str]) -> Optional[str]:

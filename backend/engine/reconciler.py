@@ -16,18 +16,32 @@ from datetime import date, datetime
 from decimal import Decimal, ROUND_HALF_UP
 from typing import Dict, List, Optional, Tuple
 
-from ..models.schemas import (
-    Invoice,
-    Settlement,
-    BankTransaction,
-    ReconciliationResult,
-    ReconciliationRun,
-    MatchType,
-    ReconciliationStatus,
-    ExceptionCategory,
-    EvidenceItem,
-    ScenarioPerformance,
-)
+try:
+    from models.schemas import (
+        Invoice,
+        Settlement,
+        BankTransaction,
+        ReconciliationResult,
+        ReconciliationRun,
+        MatchType,
+        ReconciliationStatus,
+        ExceptionCategory,
+        EvidenceItem,
+        ScenarioPerformance,
+    )
+except (ImportError, ValueError):
+    from ..models.schemas import (
+        Invoice,
+        Settlement,
+        BankTransaction,
+        ReconciliationResult,
+        ReconciliationRun,
+        MatchType,
+        ReconciliationStatus,
+        ExceptionCategory,
+        EvidenceItem,
+        ScenarioPerformance,
+    )
 
 EXACT_AMT_TOLERANCE = Decimal("0.01")
 FEE_RATE_MIN = Decimal("0.005")

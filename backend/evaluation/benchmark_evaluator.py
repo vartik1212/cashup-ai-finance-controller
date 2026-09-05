@@ -18,14 +18,24 @@ from pathlib import Path
 from typing import List, Dict, Any, Optional
 from collections import defaultdict
 
-from backend.models.schemas import (
-    ReconciliationResult,
-    ScenarioPerformance,
-    BenchmarkEvaluation,
-    MisclassifiedRecord,
-    MatchType,
-    ReconciliationStatus,
-)
+try:
+    from models.schemas import (
+        ReconciliationResult,
+        ScenarioPerformance,
+        BenchmarkEvaluation,
+        MisclassifiedRecord,
+        MatchType,
+        ReconciliationStatus,
+    )
+except ImportError:
+    from backend.models.schemas import (
+        ReconciliationResult,
+        ScenarioPerformance,
+        BenchmarkEvaluation,
+        MisclassifiedRecord,
+        MatchType,
+        ReconciliationStatus,
+    )
 
 DATA_DIR = Path(__file__).resolve().parent.parent.parent / "data"
 EVAL_DIR = Path(__file__).resolve().parent.parent.parent / "evaluation"
@@ -110,7 +120,10 @@ def find_ground_truth_for_invoices(
 
     # Retrieve strictly dataset-scoped ground truth from database
     try:
-        from ..database.db import get_dataset_ground_truth
+        try:
+            from database.db import get_dataset_ground_truth
+        except ImportError:
+            from ..database.db import get_dataset_ground_truth
         records = get_dataset_ground_truth(dataset_id)
         if records:
             gt_map = {}

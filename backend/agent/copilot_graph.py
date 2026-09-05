@@ -19,7 +19,10 @@ import logging
 from typing import Dict, Any, List, Optional, TypedDict
 from langgraph.graph import StateGraph, END
 
-from ..models.schemas import CopilotResponse, ChatMessage
+try:
+    from models.schemas import CopilotResponse, ChatMessage
+except (ImportError, ValueError):
+    from ..models.schemas import CopilotResponse, ChatMessage
 from .gemini_client import is_gemini_configured, generate_content_with_fallback, PRIMARY_MODEL
 from .finance_tools import (
     get_run_summary,

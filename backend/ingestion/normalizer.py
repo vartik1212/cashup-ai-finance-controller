@@ -13,8 +13,12 @@ import uuid
 from datetime import datetime
 from typing import Dict, List, Any, Optional
 
-from ..models.schemas import Invoice, Settlement, BankTransaction
-from ..database.db import get_db
+try:
+    from models.schemas import Invoice, Settlement, BankTransaction
+    from database.db import get_db
+except (ImportError, ValueError):
+    from ..models.schemas import Invoice, Settlement, BankTransaction
+    from ..database.db import get_db
 
 
 def normalize_and_store(

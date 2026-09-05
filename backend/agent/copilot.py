@@ -12,8 +12,12 @@ import json
 from datetime import datetime
 from typing import Optional
 
-from ..models.schemas import CopilotRequest, CopilotResponse
-from ..database.db import get_db
+try:
+    from models.schemas import CopilotRequest, CopilotResponse
+    from database.db import get_db
+except (ImportError, ValueError):
+    from ..models.schemas import CopilotRequest, CopilotResponse
+    from ..database.db import get_db
 
 
 async def get_copilot_response(req: CopilotRequest) -> CopilotResponse:

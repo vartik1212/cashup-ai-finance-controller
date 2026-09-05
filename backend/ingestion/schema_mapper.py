@@ -23,7 +23,10 @@ import re
 import json
 from datetime import datetime
 from typing import Dict, List, Any, Optional, Tuple, Set
-from ..agent.gemini_client import is_gemini_configured, generate_content_with_fallback
+try:
+    from agent.gemini_client import is_gemini_configured, generate_content_with_fallback
+except (ImportError, ValueError):
+    from ..agent.gemini_client import is_gemini_configured, generate_content_with_fallback
 
 
 DUE_DATE_TOKENS: Set[str] = {

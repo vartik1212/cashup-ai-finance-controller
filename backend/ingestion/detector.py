@@ -23,7 +23,10 @@ from __future__ import annotations
 import re
 import json
 from typing import Dict, List, Any, Tuple, Optional, Set
-from ..agent.gemini_client import is_gemini_configured, generate_content_with_fallback
+try:
+    from agent.gemini_client import is_gemini_configured, generate_content_with_fallback
+except (ImportError, ValueError):
+    from ..agent.gemini_client import is_gemini_configured, generate_content_with_fallback
 
 
 # Token weights for semantic concept clusters

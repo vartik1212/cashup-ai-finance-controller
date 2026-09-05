@@ -24,17 +24,25 @@ import logging
 _current_dir = Path(__file__).parent.resolve()
 _parent_dir = _current_dir.parent.resolve()
 
-for _p in [str(_parent_dir), str(_current_dir)]:
-    if _p not in sys.path:
-        sys.path.insert(0, _p)
+if str(_parent_dir) not in sys.path:
+    sys.path.append(str(_parent_dir))
+if str(_current_dir) in sys.path:
+    sys.path.remove(str(_current_dir))
+sys.path.insert(0, str(_current_dir))
 
 if "backend" not in sys.modules:
     _backend_pkg = types.ModuleType("backend")
     _backend_pkg.__path__ = [str(_current_dir)]
     sys.modules["backend"] = _backend_pkg
 
-from backend.database.db import init_db, get_db, load_benchmark_dataset, reset_uploaded_dataset
-from backend.models.schemas import (
+from database.db import (
+    init_db,
+    get_db,
+    load_benchmark_dataset,
+    reset_uploaded_dataset,
+    attach_dataset_ground_truth,
+)
+from models.schemas import (
     LoadDemoResponse,
     RunReconciliationRequest,
     CopilotRequest,
@@ -48,12 +56,12 @@ from backend.models.schemas import (
     AIStatusResponse,
     AIExceptionAnalysis,
 )
-from backend.workflow.reconciliation_graph import reconciliation_graph
-from backend.agent.copilot_service import copilot_service
-from backend.agent.gemini_client import is_gemini_configured, PRIMARY_MODEL
-from backend.agent.exception_investigator import analyze_exception_with_ai
-from backend.evaluation.benchmark_evaluator import find_ground_truth_for_invoices, evaluate_benchmark_run
-from backend.ingestion import (
+from workflow.reconciliation_graph import reconciliation_graph
+from agent.copilot_service import copilot_service
+from agent.gemini_client import is_gemini_configured, PRIMARY_MODEL
+from agent.exception_investigator import analyze_exception_with_ai
+from evaluation.benchmark_evaluator import find_ground_truth_for_invoices, evaluate_benchmark_run
+from ingestion import (
     profile_csv,
     detect_file_type,
     disambiguate_batch_file_types,
@@ -476,7 +484,6 @@ def attach_ground_truth_endpoint(payload: Dict[str, Any]):
             raise HTTPException(status_code=400, detail="No active dataset found.")
         dataset_id = source_row["dataset_id"]
 
-    from .database.db import attach_dataset_ground_truth
     attach_dataset_ground_truth(dataset_id, json.dumps(ground_truth_records))
     return {
         "status": "success",
@@ -1247,4 +1254,4 @@ def export_run_report_json(run_id: Optional[str] = None):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("backend.main:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)

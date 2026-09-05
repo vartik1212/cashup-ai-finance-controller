@@ -8,8 +8,9 @@ import types
 
 # Ensure backend root directory is in sys.path
 _backend_dir = Path(__file__).parent.parent.resolve()
-if str(_backend_dir) not in sys.path:
-    sys.path.insert(0, str(_backend_dir))
+if str(_backend_dir) in sys.path:
+    sys.path.remove(str(_backend_dir))
+sys.path.insert(0, str(_backend_dir))
 
 # Ensure 'backend' module alias is in sys.modules for any submodule imports
 if "backend" not in sys.modules:
