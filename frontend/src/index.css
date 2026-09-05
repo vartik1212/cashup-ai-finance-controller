@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  #root {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: #020817;
+    color: #e2e8f0;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgba(15, 23, 42, 0.6);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+  }
+
+  ::selection {
+    background: rgba(6, 182, 212, 0.3);
+    color: #e0f2fe;
+  }
+
+  *:focus-visible {
+    outline: 2px solid rgba(6, 182, 212, 0.45);
+    outline-offset: 1px;
+  }
+}
+
+@layer utilities {
+  .font-mono {
+    font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', ui-monospace, monospace;
+    font-feature-settings: 'liga' 0, 'tnum' 1;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* 3D Spatial System */
+  .perspective-container {
+    perspective: 1200px;
+    perspective-origin: 50% 35%;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .depth-surface {
+    transform: translateZ(0px);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+  }
+
+  .depth-z1 {
+    transform: translateZ(4px);
+  }
+
+  .depth-z2 {
+    transform: translateZ(10px);
+  }
+
+  .depth-z3 {
+    transform: translateZ(18px);
+  }
+
+  .depth-drawer {
+    transform: translateZ(35px);
+    box-shadow: -12px 0 35px -5px rgba(2, 6, 23, 0.75), -2px 0 10px rgba(6, 182, 212, 0.1);
+  }
+
+  /* Dashboard receding transition when drawer is open */
+  .dashboard-recede {
+    transform: scale(0.993) translateZ(-8px);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .dashboard-normal {
+    transform: scale(1) translateZ(0px);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Environmental Lighting Vignettes */
+  .light-cyan-ambient {
+    box-shadow: 0 0 40px -15px rgba(6, 182, 212, 0.15);
+  }
+
+  .light-emerald-ambient {
+    box-shadow: 0 0 40px -15px rgba(16, 185, 129, 0.15);
+  }
+
+  .light-amber-ambient {
+    box-shadow: 0 0 40px -15px rgba(245, 158, 11, 0.15);
+  }
+
+  /* Flowing signal animation for pipeline */
+  @keyframes signalFlow {
+    0% { transform: translateX(-100%); opacity: 0; }
+    30% { opacity: 1; }
+    70% { opacity: 1; }
+    100% { transform: translateX(250%); opacity: 0; }
+  }
+
+  .animate-signal-flow {
+    animation: signalFlow 2.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  }
+
+  @keyframes pulseWave {
+    0% { transform: scale(0.95); opacity: 0.8; }
+    50% { transform: scale(1.04); opacity: 0.3; }
+    100% { transform: scale(1.15); opacity: 0; }
+  }
+
+  .animate-pulse-wave {
+    animation: pulseWave 1.8s ease-out infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .perspective-container,
+  .preserve-3d,
+  .depth-surface,
+  .depth-z1,
+  .depth-z2,
+  .depth-z3,
+  .depth-drawer,
+  .dashboard-recede,
+  .dashboard-normal {
+    transform: none !important;
+    perspective: none !important;
+    transition: none !important;
+  }
+
+  .animate-signal-flow,
+  .animate-pulse-wave {
+    animation: none !important;
+  }
+}

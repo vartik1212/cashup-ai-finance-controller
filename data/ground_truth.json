@@ -1,0 +1,842 @@
+[
+  {
+    "invoice_id": "INV-2026-0001",
+    "settlement_id": "SET-2026-0001",
+    "bank_txn_id": "BNK-2026-0001",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0002",
+    "settlement_id": "SET-2026-0002",
+    "bank_txn_id": "BNK-2026-0002",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0003",
+    "settlement_id": "SET-2026-0003",
+    "bank_txn_id": "BNK-2026-0003",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0004",
+    "settlement_id": "SET-2026-0004",
+    "bank_txn_id": "BNK-2026-0004",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0005",
+    "settlement_id": "SET-2026-0005",
+    "bank_txn_id": "BNK-2026-0005",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0006",
+    "settlement_id": "SET-2026-0006",
+    "bank_txn_id": "BNK-2026-0006",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0007",
+    "settlement_id": "SET-2026-0007",
+    "bank_txn_id": "BNK-2026-0007",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0008",
+    "settlement_id": "SET-2026-0008",
+    "bank_txn_id": "BNK-2026-0008",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0009",
+    "settlement_id": "SET-2026-0009",
+    "bank_txn_id": "BNK-2026-0009",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0010",
+    "settlement_id": "SET-2026-0010",
+    "bank_txn_id": "BNK-2026-0010",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0011",
+    "settlement_id": "SET-2026-0011",
+    "bank_txn_id": "BNK-2026-0011",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0012",
+    "settlement_id": "SET-2026-0012",
+    "bank_txn_id": "BNK-2026-0012",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0013",
+    "settlement_id": "SET-2026-0013",
+    "bank_txn_id": "BNK-2026-0013",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0014",
+    "settlement_id": "SET-2026-0014",
+    "bank_txn_id": "BNK-2026-0014",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0015",
+    "settlement_id": "SET-2026-0015",
+    "bank_txn_id": "BNK-2026-0015",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0016",
+    "settlement_id": "SET-2026-0016",
+    "bank_txn_id": "BNK-2026-0016",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0017",
+    "settlement_id": "SET-2026-0017",
+    "bank_txn_id": "BNK-2026-0017",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0018",
+    "settlement_id": "SET-2026-0018",
+    "bank_txn_id": "BNK-2026-0018",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0019",
+    "settlement_id": "SET-2026-0019",
+    "bank_txn_id": "BNK-2026-0019",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0020",
+    "settlement_id": "SET-2026-0020",
+    "bank_txn_id": "BNK-2026-0020",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0021",
+    "settlement_id": "SET-2026-0021",
+    "bank_txn_id": "BNK-2026-0021",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0022",
+    "settlement_id": "SET-2026-0022",
+    "bank_txn_id": "BNK-2026-0022",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0023",
+    "settlement_id": "SET-2026-0023",
+    "bank_txn_id": "BNK-2026-0023",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0024",
+    "settlement_id": "SET-2026-0024",
+    "bank_txn_id": "BNK-2026-0024",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0025",
+    "settlement_id": "SET-2026-0025",
+    "bank_txn_id": "BNK-2026-0025",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0026",
+    "settlement_id": "SET-2026-0026",
+    "bank_txn_id": "BNK-2026-0026",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0027",
+    "settlement_id": "SET-2026-0027",
+    "bank_txn_id": "BNK-2026-0027",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0028",
+    "settlement_id": "SET-2026-0028",
+    "bank_txn_id": "BNK-2026-0028",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0029",
+    "settlement_id": "SET-2026-0029",
+    "bank_txn_id": "BNK-2026-0029",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0030",
+    "settlement_id": "SET-2026-0030",
+    "bank_txn_id": "BNK-2026-0030",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0031",
+    "settlement_id": "SET-2026-0031",
+    "bank_txn_id": "BNK-2026-0031",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0032",
+    "settlement_id": "SET-2026-0032",
+    "bank_txn_id": "BNK-2026-0032",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0033",
+    "settlement_id": "SET-2026-0033",
+    "bank_txn_id": "BNK-2026-0033",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0034",
+    "settlement_id": "SET-2026-0034",
+    "bank_txn_id": "BNK-2026-0034",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0035",
+    "settlement_id": "SET-2026-0035",
+    "bank_txn_id": "BNK-2026-0035",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0036",
+    "settlement_id": "SET-2026-0036",
+    "bank_txn_id": "BNK-2026-0036",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0037",
+    "settlement_id": "SET-2026-0037",
+    "bank_txn_id": "BNK-2026-0037",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0038",
+    "settlement_id": "SET-2026-0038",
+    "bank_txn_id": "BNK-2026-0038",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0039",
+    "settlement_id": "SET-2026-0039",
+    "bank_txn_id": "BNK-2026-0039",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0040",
+    "settlement_id": "SET-2026-0040",
+    "bank_txn_id": "BNK-2026-0040",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0041",
+    "settlement_id": "SET-2026-0041",
+    "bank_txn_id": "BNK-2026-0041",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0042",
+    "settlement_id": "SET-2026-0042",
+    "bank_txn_id": "BNK-2026-0042",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0043",
+    "settlement_id": "SET-2026-0043",
+    "bank_txn_id": "BNK-2026-0043",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0044",
+    "settlement_id": "SET-2026-0044",
+    "bank_txn_id": "BNK-2026-0044",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0045",
+    "settlement_id": "SET-2026-0045",
+    "bank_txn_id": "BNK-2026-0045",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0046",
+    "settlement_id": "SET-2026-0046",
+    "bank_txn_id": "BNK-2026-0046",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0047",
+    "settlement_id": "SET-2026-0047",
+    "bank_txn_id": "BNK-2026-0047",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0048",
+    "settlement_id": "SET-2026-0048",
+    "bank_txn_id": "BNK-2026-0048",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0049",
+    "settlement_id": "SET-2026-0049",
+    "bank_txn_id": "BNK-2026-0049",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0050",
+    "settlement_id": "SET-2026-0050",
+    "bank_txn_id": "BNK-2026-0050",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0051",
+    "settlement_id": "SET-2026-0051",
+    "bank_txn_id": "BNK-2026-0051",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0052",
+    "settlement_id": "SET-2026-0052",
+    "bank_txn_id": "BNK-2026-0052",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0053",
+    "settlement_id": "SET-2026-0053",
+    "bank_txn_id": "BNK-2026-0053",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0054",
+    "settlement_id": "SET-2026-0054",
+    "bank_txn_id": "BNK-2026-0054",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0055",
+    "settlement_id": "SET-2026-0055",
+    "bank_txn_id": "BNK-2026-0055",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0056",
+    "settlement_id": "SET-2026-0056",
+    "bank_txn_id": "BNK-2026-0056",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0057",
+    "settlement_id": "SET-2026-0057",
+    "bank_txn_id": "BNK-2026-0057",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0058",
+    "settlement_id": "SET-2026-0058",
+    "bank_txn_id": "BNK-2026-0058",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0059",
+    "settlement_id": "SET-2026-0059",
+    "bank_txn_id": "BNK-2026-0059",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0060",
+    "settlement_id": "SET-2026-0060",
+    "bank_txn_id": "BNK-2026-0060",
+    "scenario": "exact_match",
+    "expected_status": "Exact Match"
+  },
+  {
+    "invoice_id": "INV-2026-0061",
+    "settlement_id": "SET-2026-0061",
+    "bank_txn_id": "BNK-2026-0061",
+    "scenario": "fee_adjusted",
+    "expected_status": "Fee Match"
+  },
+  {
+    "invoice_id": "INV-2026-0062",
+    "settlement_id": "SET-2026-0062",
+    "bank_txn_id": "BNK-2026-0062",
+    "scenario": "fee_adjusted",
+    "expected_status": "Fee Match"
+  },
+  {
+    "invoice_id": "INV-2026-0063",
+    "settlement_id": "SET-2026-0063",
+    "bank_txn_id": "BNK-2026-0063",
+    "scenario": "fee_adjusted",
+    "expected_status": "Fee Match"
+  },
+  {
+    "invoice_id": "INV-2026-0064",
+    "settlement_id": "SET-2026-0064",
+    "bank_txn_id": "BNK-2026-0064",
+    "scenario": "fee_adjusted",
+    "expected_status": "Fee Match"
+  },
+  {
+    "invoice_id": "INV-2026-0065",
+    "settlement_id": "SET-2026-0065",
+    "bank_txn_id": "BNK-2026-0065",
+    "scenario": "fee_adjusted",
+    "expected_status": "Fee Match"
+  },
+  {
+    "invoice_id": "INV-2026-0066",
+    "settlement_id": "SET-2026-0066",
+    "bank_txn_id": "BNK-2026-0066",
+    "scenario": "fee_adjusted",
+    "expected_status": "Fee Match"
+  },
+  {
+    "invoice_id": "INV-2026-0067",
+    "settlement_id": "SET-2026-0067",
+    "bank_txn_id": "BNK-2026-0067",
+    "scenario": "fee_adjusted",
+    "expected_status": "Fee Match"
+  },
+  {
+    "invoice_id": "INV-2026-0068",
+    "settlement_id": "SET-2026-0068",
+    "bank_txn_id": "BNK-2026-0068",
+    "scenario": "fee_adjusted",
+    "expected_status": "Fee Match"
+  },
+  {
+    "invoice_id": "INV-2026-0069",
+    "settlement_id": "SET-2026-0069",
+    "bank_txn_id": "BNK-2026-0069",
+    "scenario": "fee_adjusted",
+    "expected_status": "Fee Match"
+  },
+  {
+    "invoice_id": "INV-2026-0070",
+    "settlement_id": "SET-2026-0070",
+    "bank_txn_id": "BNK-2026-0070",
+    "scenario": "fee_adjusted",
+    "expected_status": "Fee Match"
+  },
+  {
+    "invoice_id": "INV-2026-0071",
+    "settlement_id": "SET-2026-0071",
+    "bank_txn_id": "BNK-2026-0071",
+    "scenario": "fee_adjusted",
+    "expected_status": "Fee Match"
+  },
+  {
+    "invoice_id": "INV-2026-0072",
+    "settlement_id": "SET-2026-0072",
+    "bank_txn_id": "BNK-2026-0072",
+    "scenario": "fee_adjusted",
+    "expected_status": "Fee Match"
+  },
+  {
+    "invoice_id": "INV-2026-0073",
+    "settlement_id": "SET-2026-0073",
+    "bank_txn_id": "BNK-2026-0073",
+    "scenario": "fee_adjusted",
+    "expected_status": "Fee Match"
+  },
+  {
+    "invoice_id": "INV-2026-0074",
+    "settlement_id": "SET-2026-0074",
+    "bank_txn_id": "BNK-2026-0074",
+    "scenario": "fee_adjusted",
+    "expected_status": "Fee Match"
+  },
+  {
+    "invoice_id": "INV-2026-0075",
+    "settlement_id": "SET-2026-0075",
+    "bank_txn_id": "BNK-2026-0075",
+    "scenario": "fee_adjusted",
+    "expected_status": "Fee Match"
+  },
+  {
+    "invoice_id": "INV-2026-0076",
+    "settlement_id": "SET-2026-0076",
+    "bank_txn_id": "BNK-2026-0076",
+    "scenario": "delayed_settlement",
+    "expected_status": "Probable Match"
+  },
+  {
+    "invoice_id": "INV-2026-0077",
+    "settlement_id": "SET-2026-0077",
+    "bank_txn_id": "BNK-2026-0077",
+    "scenario": "delayed_settlement",
+    "expected_status": "Probable Match"
+  },
+  {
+    "invoice_id": "INV-2026-0078",
+    "settlement_id": "SET-2026-0078",
+    "bank_txn_id": "BNK-2026-0078",
+    "scenario": "delayed_settlement",
+    "expected_status": "Probable Match"
+  },
+  {
+    "invoice_id": "INV-2026-0079",
+    "settlement_id": "SET-2026-0079",
+    "bank_txn_id": "BNK-2026-0079",
+    "scenario": "delayed_settlement",
+    "expected_status": "Probable Match"
+  },
+  {
+    "invoice_id": "INV-2026-0080",
+    "settlement_id": "SET-2026-0080",
+    "bank_txn_id": "BNK-2026-0080",
+    "scenario": "delayed_settlement",
+    "expected_status": "Probable Match"
+  },
+  {
+    "invoice_id": "INV-2026-0081",
+    "settlement_id": "SET-2026-0081",
+    "bank_txn_id": "BNK-2026-0081",
+    "scenario": "delayed_settlement",
+    "expected_status": "Probable Match"
+  },
+  {
+    "invoice_id": "INV-2026-0082",
+    "settlement_id": "SET-2026-0082",
+    "bank_txn_id": "BNK-2026-0082",
+    "scenario": "delayed_settlement",
+    "expected_status": "Probable Match"
+  },
+  {
+    "invoice_id": "INV-2026-0083",
+    "settlement_id": "SET-2026-0083",
+    "bank_txn_id": "BNK-2026-0083",
+    "scenario": "delayed_settlement",
+    "expected_status": "Probable Match"
+  },
+  {
+    "invoice_id": "INV-2026-0084",
+    "settlement_id": "SET-2026-0084",
+    "bank_txn_id": "BNK-2026-0084",
+    "scenario": "delayed_settlement",
+    "expected_status": "Probable Match"
+  },
+  {
+    "invoice_id": "INV-2026-0085",
+    "settlement_id": "SET-2026-0085",
+    "bank_txn_id": "BNK-2026-0085",
+    "scenario": "delayed_settlement",
+    "expected_status": "Probable Match"
+  },
+  {
+    "invoice_id": "INV-2026-0086",
+    "settlement_id": "SET-2026-0086",
+    "bank_txn_id": "BNK-2026-0086",
+    "scenario": "partial_payment",
+    "expected_status": "Human Review"
+  },
+  {
+    "invoice_id": "INV-2026-0087",
+    "settlement_id": "SET-2026-0087",
+    "bank_txn_id": "BNK-2026-0087",
+    "scenario": "partial_payment",
+    "expected_status": "Human Review"
+  },
+  {
+    "invoice_id": "INV-2026-0088",
+    "settlement_id": "SET-2026-0088",
+    "bank_txn_id": "BNK-2026-0088",
+    "scenario": "partial_payment",
+    "expected_status": "Human Review"
+  },
+  {
+    "invoice_id": "INV-2026-0089",
+    "settlement_id": "SET-2026-0089",
+    "bank_txn_id": "BNK-2026-0089",
+    "scenario": "partial_payment",
+    "expected_status": "Human Review"
+  },
+  {
+    "invoice_id": "INV-2026-0090",
+    "settlement_id": "SET-2026-0090",
+    "bank_txn_id": "BNK-2026-0090",
+    "scenario": "partial_payment",
+    "expected_status": "Human Review"
+  },
+  {
+    "invoice_id": "INV-2026-0091",
+    "settlement_id": "SET-2026-0091",
+    "bank_txn_id": "BNK-2026-0091",
+    "scenario": "partial_payment",
+    "expected_status": "Human Review"
+  },
+  {
+    "invoice_id": "INV-2026-0092",
+    "settlement_id": "SET-2026-0092",
+    "bank_txn_id": "BNK-2026-0092",
+    "scenario": "partial_payment",
+    "expected_status": "Human Review"
+  },
+  {
+    "invoice_id": "INV-2026-0093",
+    "settlement_id": "SET-2026-0093",
+    "bank_txn_id": "BNK-2026-0093",
+    "scenario": "partial_payment",
+    "expected_status": "Human Review"
+  },
+  {
+    "invoice_id": "INV-2026-0094",
+    "settlement_id": "SET-2026-0094",
+    "bank_txn_id": "BNK-2026-0094",
+    "scenario": "refund",
+    "expected_status": "Human Review"
+  },
+  {
+    "invoice_id": "INV-2026-0095",
+    "settlement_id": "SET-2026-0095",
+    "bank_txn_id": "BNK-2026-0095",
+    "scenario": "refund",
+    "expected_status": "Human Review"
+  },
+  {
+    "invoice_id": "INV-2026-0096",
+    "settlement_id": "SET-2026-0096",
+    "bank_txn_id": "BNK-2026-0096",
+    "scenario": "refund",
+    "expected_status": "Human Review"
+  },
+  {
+    "invoice_id": "INV-2026-0097",
+    "settlement_id": "SET-2026-0097",
+    "bank_txn_id": "BNK-2026-0097",
+    "scenario": "refund",
+    "expected_status": "Human Review"
+  },
+  {
+    "invoice_id": "INV-2026-0098",
+    "settlement_id": "SET-2026-0098",
+    "bank_txn_id": "BNK-2026-0098",
+    "scenario": "refund",
+    "expected_status": "Human Review"
+  },
+  {
+    "invoice_id": "INV-2026-0099",
+    "settlement_id": "SET-2026-0099",
+    "bank_txn_id": "BNK-2026-0099",
+    "scenario": "refund",
+    "expected_status": "Human Review"
+  },
+  {
+    "invoice_id": "INV-2026-0100",
+    "settlement_id": "SET-2026-0100",
+    "bank_txn_id": "BNK-2026-0100",
+    "scenario": "duplicate_payment",
+    "expected_status": "Human Review"
+  },
+  {
+    "invoice_id": "INV-2026-0101",
+    "settlement_id": "SET-2026-0102",
+    "bank_txn_id": "BNK-2026-0102",
+    "scenario": "duplicate_payment",
+    "expected_status": "Human Review"
+  },
+  {
+    "invoice_id": "INV-2026-0102",
+    "settlement_id": "SET-2026-0104",
+    "bank_txn_id": "BNK-2026-0104",
+    "scenario": "duplicate_payment",
+    "expected_status": "Human Review"
+  },
+  {
+    "invoice_id": "INV-2026-0103",
+    "settlement_id": "SET-2026-0106",
+    "bank_txn_id": "BNK-2026-0106",
+    "scenario": "duplicate_payment",
+    "expected_status": "Human Review"
+  },
+  {
+    "invoice_id": "INV-2026-0104",
+    "settlement_id": "SET-2026-0108",
+    "bank_txn_id": "BNK-2026-0108",
+    "scenario": "duplicate_payment",
+    "expected_status": "Human Review"
+  },
+  {
+    "invoice_id": "INV-2026-0105",
+    "settlement_id": "SET-2026-0110",
+    "bank_txn_id": "BNK-2026-0110",
+    "scenario": "amount_mismatch",
+    "expected_status": "Human Review"
+  },
+  {
+    "invoice_id": "INV-2026-0106",
+    "settlement_id": "SET-2026-0111",
+    "bank_txn_id": "BNK-2026-0111",
+    "scenario": "amount_mismatch",
+    "expected_status": "Human Review"
+  },
+  {
+    "invoice_id": "INV-2026-0107",
+    "settlement_id": "SET-2026-0112",
+    "bank_txn_id": "BNK-2026-0112",
+    "scenario": "amount_mismatch",
+    "expected_status": "Human Review"
+  },
+  {
+    "invoice_id": "INV-2026-0108",
+    "settlement_id": "SET-2026-0113",
+    "bank_txn_id": "BNK-2026-0113",
+    "scenario": "amount_mismatch",
+    "expected_status": "Human Review"
+  },
+  {
+    "invoice_id": "INV-2026-0109",
+    "settlement_id": "SET-2026-0114",
+    "bank_txn_id": "BNK-2026-0114",
+    "scenario": "amount_mismatch",
+    "expected_status": "Human Review"
+  },
+  {
+    "invoice_id": "INV-2026-0110",
+    "settlement_id": null,
+    "bank_txn_id": null,
+    "scenario": "missing_settlement",
+    "expected_status": "Unresolved"
+  },
+  {
+    "invoice_id": "INV-2026-0111",
+    "settlement_id": null,
+    "bank_txn_id": null,
+    "scenario": "missing_settlement",
+    "expected_status": "Unresolved"
+  },
+  {
+    "invoice_id": "INV-2026-0112",
+    "settlement_id": null,
+    "bank_txn_id": null,
+    "scenario": "missing_settlement",
+    "expected_status": "Unresolved"
+  },
+  {
+    "invoice_id": "INV-2026-0113",
+    "settlement_id": null,
+    "bank_txn_id": null,
+    "scenario": "missing_settlement",
+    "expected_status": "Unresolved"
+  },
+  {
+    "invoice_id": "INV-2026-0114",
+    "settlement_id": null,
+    "bank_txn_id": null,
+    "scenario": "missing_settlement",
+    "expected_status": "Unresolved"
+  },
+  {
+    "invoice_id": "INV-2026-0115",
+    "settlement_id": "SET-2026-0115",
+    "bank_txn_id": "BNK-2026-0115",
+    "scenario": "ambiguous_match",
+    "expected_status": "Human Review"
+  },
+  {
+    "invoice_id": "INV-2026-0116",
+    "settlement_id": "SET-2026-0116",
+    "bank_txn_id": "BNK-2026-0116",
+    "scenario": "ambiguous_match",
+    "expected_status": "Human Review"
+  },
+  {
+    "invoice_id": "INV-2026-0117",
+    "settlement_id": "SET-2026-0117",
+    "bank_txn_id": "BNK-2026-0117",
+    "scenario": "ambiguous_match",
+    "expected_status": "Human Review"
+  },
+  {
+    "invoice_id": "INV-2026-0118",
+    "settlement_id": "SET-2026-0118",
+    "bank_txn_id": "BNK-2026-0118",
+    "scenario": "ambiguous_match",
+    "expected_status": "Human Review"
+  },
+  {
+    "invoice_id": "INV-2026-0119",
+    "settlement_id": "SET-2026-0119",
+    "bank_txn_id": "BNK-2026-0119",
+    "scenario": "ambiguous_match",
+    "expected_status": "Human Review"
+  },
+  {
+    "invoice_id": "INV-2026-0120",
+    "settlement_id": "SET-2026-0120",
+    "bank_txn_id": "BNK-2026-0120",
+    "scenario": "ambiguous_match",
+    "expected_status": "Human Review"
+  }
+]

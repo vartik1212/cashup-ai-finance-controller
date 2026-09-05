@@ -1,0 +1,61 @@
+invoice_id,expected_scenario,expected_status,expected_settlement_id
+BILL-2026001,Exact Match,Exact Match,PAY-90001
+BILL-2026002,Exact Match,Exact Match,PAY-90002
+BILL-2026003,Exact Match,Exact Match,PAY-90003
+BILL-2026004,Exact Match,Exact Match,PAY-90004
+BILL-2026005,Exact Match,Exact Match,PAY-90005
+BILL-2026006,Exact Match,Exact Match,PAY-90006
+BILL-2026007,Exact Match,Exact Match,PAY-90007
+BILL-2026008,Exact Match,Exact Match,PAY-90008
+BILL-2026009,Exact Match,Exact Match,PAY-90009
+BILL-2026010,Exact Match,Exact Match,PAY-90010
+BILL-2026011,Exact Match,Exact Match,PAY-90011
+BILL-2026012,Exact Match,Exact Match,PAY-90012
+BILL-2026013,Exact Match,Exact Match,PAY-90013
+BILL-2026014,Exact Match,Exact Match,PAY-90014
+BILL-2026015,Exact Match,Exact Match,PAY-90015
+BILL-2026016,Exact Match,Exact Match,PAY-90016
+BILL-2026017,Exact Match,Exact Match,PAY-90017
+BILL-2026018,Exact Match,Exact Match,PAY-90018
+BILL-2026019,Exact Match,Exact Match,PAY-90019
+BILL-2026020,Exact Match,Exact Match,PAY-90020
+BILL-2026021,Exact Match,Exact Match,PAY-90021
+BILL-2026022,Exact Match,Exact Match,PAY-90022
+BILL-2026023,Exact Match,Exact Match,PAY-90023
+BILL-2026024,Exact Match,Exact Match,PAY-90024
+BILL-2026025,Exact Match,Exact Match,PAY-90025
+BILL-2026026,Exact Match,Exact Match,PAY-90026
+BILL-2026027,Exact Match,Exact Match,PAY-90027
+BILL-2026028,Exact Match,Exact Match,PAY-90028
+BILL-2026029,Exact Match,Exact Match,PAY-90029
+BILL-2026030,Exact Match,Exact Match,PAY-90030
+BILL-2026031,Fee Adjusted,Fee Match,PAY-90031
+BILL-2026032,Fee Adjusted,Fee Match,PAY-90032
+BILL-2026033,Fee Adjusted,Fee Match,PAY-90033
+BILL-2026034,Fee Adjusted,Fee Match,PAY-90034
+BILL-2026035,Fee Adjusted,Fee Match,PAY-90035
+BILL-2026036,Fee Adjusted,Fee Match,PAY-90036
+BILL-2026037,Fee Adjusted,Fee Match,PAY-90037
+BILL-2026038,Fee Adjusted,Fee Match,PAY-90038
+BILL-2026039,Delayed Settlement,Probable Match,PAY-90039
+BILL-2026040,Delayed Settlement,Probable Match,PAY-90040
+BILL-2026041,Delayed Settlement,Probable Match,PAY-90041
+BILL-2026042,Delayed Settlement,Probable Match,PAY-90042
+BILL-2026043,Delayed Settlement,Probable Match,PAY-90043
+BILL-2026044,Partial Payment,Human Review,PAY-90044
+BILL-2026045,Partial Payment,Human Review,PAY-90045
+BILL-2026046,Partial Payment,Human Review,PAY-90046
+BILL-2026047,Partial Payment,Human Review,PAY-90047
+BILL-2026048,Refund,Human Review,PAY-90048
+BILL-2026049,Refund,Human Review,PAY-90049
+BILL-2026050,Refund,Human Review,PAY-90050
+BILL-2026051,Duplicate,Human Review,PAY-90051
+BILL-2026052,Duplicate,Human Review,PAY-90052
+BILL-2026053,Duplicate,Human Review,PAY-90053
+BILL-2026054,Amount Mismatch,Unresolved,PAY-90054
+BILL-2026055,Amount Mismatch,Unresolved,PAY-90055
+BILL-2026056,Amount Mismatch,Unresolved,PAY-90056
+BILL-2026057,Missing Settlement,Unresolved,
+BILL-2026058,Missing Settlement,Unresolved,
+BILL-2026059,Ambiguous Match,Human Review,PAY-90059
+BILL-2026060,Ambiguous Match,Human Review,PAY-90060

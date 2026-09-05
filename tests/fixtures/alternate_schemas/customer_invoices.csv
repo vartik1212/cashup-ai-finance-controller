@@ -1,0 +1,4 @@
+bill_no,company,bill_value,created_date
+INV-ALT-001,Acme Corp,45000.00,2026-03-01
+INV-ALT-002,Global Logistics,82000.00,2026-03-02
+INV-ALT-003,Zenith Software,125000.00,2026-03-03

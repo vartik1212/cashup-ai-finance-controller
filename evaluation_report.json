@@ -1,0 +1,194 @@
+{
+  "run_id": "RUN-0990C0A0",
+  "total_cases": 60,
+  "correct_classifications": 51,
+  "incorrect_classifications": 9,
+  "classification_accuracy": 0.85,
+  "precision": 0.8431,
+  "recall": 1.0,
+  "f1": 0.9149,
+  "tp": 43,
+  "fp": 8,
+  "fn": 0,
+  "tn": 9,
+  "auto_verified_total": 47,
+  "true_auto_verified": 38,
+  "false_auto_verified": 9,
+  "auto_verified_precision": 0.8085,
+  "false_unresolved": 0,
+  "human_review_expected": 12,
+  "human_review_correct": 7,
+  "human_review_routing_accuracy": 0.5833,
+  "unresolved_expected": 5,
+  "unresolved_correct": 2,
+  "unresolved_routing_accuracy": 0.4,
+  "per_category_results": {
+    "Exact Match": {
+      "total": 30,
+      "correct": 30,
+      "accuracy": 1.0
+    },
+    "Fee Adjusted": {
+      "total": 8,
+      "correct": 8,
+      "accuracy": 1.0
+    },
+    "Delayed Settlement": {
+      "total": 5,
+      "correct": 4,
+      "accuracy": 0.8
+    },
+    "Partial Payment": {
+      "total": 4,
+      "correct": 4,
+      "accuracy": 1.0
+    },
+    "Refund": {
+      "total": 3,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    "Duplicate": {
+      "total": 3,
+      "correct": 3,
+      "accuracy": 1.0
+    },
+    "Amount Mismatch": {
+      "total": 3,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    "Missing Settlement": {
+      "total": 2,
+      "correct": 2,
+      "accuracy": 1.0
+    },
+    "Ambiguous Match": {
+      "total": 2,
+      "correct": 0,
+      "accuracy": 0.0
+    }
+  },
+  "confusion_breakdown": {
+    "Exact Match": {
+      "Exact Match": 30
+    },
+    "Fee Adjusted": {
+      "Fee Adjusted": 8
+    },
+    "Delayed Settlement": {
+      "Delayed Settlement": 4,
+      "Exact Match": 1
+    },
+    "Partial Payment": {
+      "Partial Payment": 4
+    },
+    "Refund": {
+      "Exact Match": 3
+    },
+    "Duplicate": {
+      "Duplicate": 3
+    },
+    "Amount Mismatch": {
+      "Exact Match": 3
+    },
+    "Missing Settlement": {
+      "Missing Settlement": 2
+    },
+    "Ambiguous Match": {
+      "Exact Match": 2
+    }
+  },
+  "misclassified_invoices": [
+    {
+      "invoice_id": "BILL-2026041",
+      "ground_truth": "Delayed Settlement",
+      "prediction": "Exact Match",
+      "confidence": 0.75,
+      "status": "Fee Match",
+      "rule_triggered": "Node 5 Classify: match_type=exact_match, status=Fee Match",
+      "reason_for_error": "days_delta=5 did not exceed DATE_DELAYED_DAYS (5). Evaluated as <= 5 days SLA window, falling through to Exact Match.",
+      "is_false_auto_verified": true
+    },
+    {
+      "invoice_id": "BILL-2026048",
+      "ground_truth": "Refund",
+      "prediction": "Exact Match",
+      "confidence": 0.75,
+      "status": "Fee Match",
+      "rule_triggered": "Node 5 Classify: match_type=exact_match, status=Fee Match",
+      "reason_for_error": "refund_value was unmapped/ignored; processor_note had no 'refund' keyword; gross equaled invoice amount, defaulting to Exact Match.",
+      "is_false_auto_verified": true
+    },
+    {
+      "invoice_id": "BILL-2026049",
+      "ground_truth": "Refund",
+      "prediction": "Exact Match",
+      "confidence": 0.75,
+      "status": "Fee Match",
+      "rule_triggered": "Node 5 Classify: match_type=exact_match, status=Fee Match",
+      "reason_for_error": "refund_value was unmapped/ignored; processor_note had no 'refund' keyword; gross equaled invoice amount, defaulting to Exact Match.",
+      "is_false_auto_verified": true
+    },
+    {
+      "invoice_id": "BILL-2026050",
+      "ground_truth": "Refund",
+      "prediction": "Exact Match",
+      "confidence": 0.75,
+      "status": "Fee Match",
+      "rule_triggered": "Node 5 Classify: match_type=exact_match, status=Fee Match",
+      "reason_for_error": "refund_value was unmapped/ignored; processor_note had no 'refund' keyword; gross equaled invoice amount, defaulting to Exact Match.",
+      "is_false_auto_verified": true
+    },
+    {
+      "invoice_id": "BILL-2026054",
+      "ground_truth": "Amount Mismatch",
+      "prediction": "Exact Match",
+      "confidence": 0.75,
+      "status": "Fee Match",
+      "rule_triggered": "Node 5 Classify: match_type=exact_match, status=Fee Match",
+      "reason_for_error": "Engine compared invoice amount against settlement gross amount (which matched), ignoring discrepancy in net received amount (+1800 to +4200).",
+      "is_false_auto_verified": true
+    },
+    {
+      "invoice_id": "BILL-2026055",
+      "ground_truth": "Amount Mismatch",
+      "prediction": "Exact Match",
+      "confidence": 0.75,
+      "status": "Fee Match",
+      "rule_triggered": "Node 5 Classify: match_type=exact_match, status=Fee Match",
+      "reason_for_error": "Engine compared invoice amount against settlement gross amount (which matched), ignoring discrepancy in net received amount (+1800 to +4200).",
+      "is_false_auto_verified": true
+    },
+    {
+      "invoice_id": "BILL-2026056",
+      "ground_truth": "Amount Mismatch",
+      "prediction": "Exact Match",
+      "confidence": 0.75,
+      "status": "Fee Match",
+      "rule_triggered": "Node 5 Classify: match_type=exact_match, status=Fee Match",
+      "reason_for_error": "Engine compared invoice amount against settlement gross amount (which matched), ignoring discrepancy in net received amount (+1800 to +4200).",
+      "is_false_auto_verified": true
+    },
+    {
+      "invoice_id": "BILL-2026059",
+      "ground_truth": "Ambiguous Match",
+      "prediction": "Exact Match",
+      "confidence": 0.75,
+      "status": "Fee Match",
+      "rule_triggered": "Node 5 Classify: match_type=exact_match, status=Fee Match",
+      "reason_for_error": "Engine performed exact reference matching in Pass 1 to PAY-90059/60 and skipped Pass 2 ambiguity checks for candidate ALT-90059/60.",
+      "is_false_auto_verified": true
+    },
+    {
+      "invoice_id": "BILL-2026060",
+      "ground_truth": "Ambiguous Match",
+      "prediction": "Exact Match",
+      "confidence": 0.75,
+      "status": "Fee Match",
+      "rule_triggered": "Node 5 Classify: match_type=exact_match, status=Fee Match",
+      "reason_for_error": "Engine performed exact reference matching in Pass 1 to PAY-90059/60 and skipped Pass 2 ambiguity checks for candidate ALT-90059/60.",
+      "is_false_auto_verified": true
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+payment_ref,bill_reference,gross,processing_charge,tax_on_charge,received,paid_on
+PAY-ALT-001,INV-ALT-001,45000.00,0.00,0.00,45000.00,2026-03-02
+PAY-ALT-002,INV-ALT-002,82000.00,1640.00,295.20,80064.80,2026-03-03
+PAY-ALT-003,INV-ALT-003,125000.00,0.00,0.00,125000.00,2026-03-18

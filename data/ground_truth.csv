@@ -1,0 +1,121 @@
+invoice_id,settlement_id,bank_txn_id,scenario,expected_status
+INV-2026-0001,SET-2026-0001,BNK-2026-0001,exact_match,Exact Match
+INV-2026-0002,SET-2026-0002,BNK-2026-0002,exact_match,Exact Match
+INV-2026-0003,SET-2026-0003,BNK-2026-0003,exact_match,Exact Match
+INV-2026-0004,SET-2026-0004,BNK-2026-0004,exact_match,Exact Match
+INV-2026-0005,SET-2026-0005,BNK-2026-0005,exact_match,Exact Match
+INV-2026-0006,SET-2026-0006,BNK-2026-0006,exact_match,Exact Match
+INV-2026-0007,SET-2026-0007,BNK-2026-0007,exact_match,Exact Match
+INV-2026-0008,SET-2026-0008,BNK-2026-0008,exact_match,Exact Match
+INV-2026-0009,SET-2026-0009,BNK-2026-0009,exact_match,Exact Match
+INV-2026-0010,SET-2026-0010,BNK-2026-0010,exact_match,Exact Match
+INV-2026-0011,SET-2026-0011,BNK-2026-0011,exact_match,Exact Match
+INV-2026-0012,SET-2026-0012,BNK-2026-0012,exact_match,Exact Match
+INV-2026-0013,SET-2026-0013,BNK-2026-0013,exact_match,Exact Match
+INV-2026-0014,SET-2026-0014,BNK-2026-0014,exact_match,Exact Match
+INV-2026-0015,SET-2026-0015,BNK-2026-0015,exact_match,Exact Match
+INV-2026-0016,SET-2026-0016,BNK-2026-0016,exact_match,Exact Match
+INV-2026-0017,SET-2026-0017,BNK-2026-0017,exact_match,Exact Match
+INV-2026-0018,SET-2026-0018,BNK-2026-0018,exact_match,Exact Match
+INV-2026-0019,SET-2026-0019,BNK-2026-0019,exact_match,Exact Match
+INV-2026-0020,SET-2026-0020,BNK-2026-0020,exact_match,Exact Match
+INV-2026-0021,SET-2026-0021,BNK-2026-0021,exact_match,Exact Match
+INV-2026-0022,SET-2026-0022,BNK-2026-0022,exact_match,Exact Match
+INV-2026-0023,SET-2026-0023,BNK-2026-0023,exact_match,Exact Match
+INV-2026-0024,SET-2026-0024,BNK-2026-0024,exact_match,Exact Match
+INV-2026-0025,SET-2026-0025,BNK-2026-0025,exact_match,Exact Match
+INV-2026-0026,SET-2026-0026,BNK-2026-0026,exact_match,Exact Match
+INV-2026-0027,SET-2026-0027,BNK-2026-0027,exact_match,Exact Match
+INV-2026-0028,SET-2026-0028,BNK-2026-0028,exact_match,Exact Match
+INV-2026-0029,SET-2026-0029,BNK-2026-0029,exact_match,Exact Match
+INV-2026-0030,SET-2026-0030,BNK-2026-0030,exact_match,Exact Match
+INV-2026-0031,SET-2026-0031,BNK-2026-0031,exact_match,Exact Match
+INV-2026-0032,SET-2026-0032,BNK-2026-0032,exact_match,Exact Match
+INV-2026-0033,SET-2026-0033,BNK-2026-0033,exact_match,Exact Match
+INV-2026-0034,SET-2026-0034,BNK-2026-0034,exact_match,Exact Match
+INV-2026-0035,SET-2026-0035,BNK-2026-0035,exact_match,Exact Match
+INV-2026-0036,SET-2026-0036,BNK-2026-0036,fee_adjusted,Fee Match
+INV-2026-0037,SET-2026-0037,BNK-2026-0037,fee_adjusted,Fee Match
+INV-2026-0038,SET-2026-0038,BNK-2026-0038,fee_adjusted,Fee Match
+INV-2026-0039,SET-2026-0039,BNK-2026-0039,fee_adjusted,Fee Match
+INV-2026-0040,SET-2026-0040,BNK-2026-0040,fee_adjusted,Fee Match
+INV-2026-0041,SET-2026-0041,BNK-2026-0041,fee_adjusted,Fee Match
+INV-2026-0042,SET-2026-0042,BNK-2026-0042,fee_adjusted,Fee Match
+INV-2026-0043,SET-2026-0043,BNK-2026-0043,fee_adjusted,Fee Match
+INV-2026-0044,SET-2026-0044,BNK-2026-0044,fee_adjusted,Fee Match
+INV-2026-0045,SET-2026-0045,BNK-2026-0045,fee_adjusted,Fee Match
+INV-2026-0046,SET-2026-0046,BNK-2026-0046,fee_adjusted,Fee Match
+INV-2026-0047,SET-2026-0047,BNK-2026-0047,fee_adjusted,Fee Match
+INV-2026-0048,SET-2026-0048,BNK-2026-0048,fee_adjusted,Fee Match
+INV-2026-0049,SET-2026-0049,BNK-2026-0049,fee_adjusted,Fee Match
+INV-2026-0050,SET-2026-0050,BNK-2026-0050,fee_adjusted,Fee Match
+INV-2026-0051,SET-2026-0051,BNK-2026-0051,fee_adjusted,Fee Match
+INV-2026-0052,SET-2026-0052,BNK-2026-0052,fee_adjusted,Fee Match
+INV-2026-0053,SET-2026-0053,BNK-2026-0053,fee_adjusted,Fee Match
+INV-2026-0054,SET-2026-0054,BNK-2026-0054,fee_adjusted,Fee Match
+INV-2026-0055,SET-2026-0055,BNK-2026-0055,fee_adjusted,Fee Match
+INV-2026-0056,SET-2026-0056,BNK-2026-0056,delayed_settlement,Probable Match
+INV-2026-0057,SET-2026-0057,BNK-2026-0057,delayed_settlement,Probable Match
+INV-2026-0058,SET-2026-0058,BNK-2026-0058,delayed_settlement,Probable Match
+INV-2026-0059,SET-2026-0059,BNK-2026-0059,delayed_settlement,Probable Match
+INV-2026-0060,SET-2026-0060,BNK-2026-0060,delayed_settlement,Probable Match
+INV-2026-0061,SET-2026-0061,BNK-2026-0061,delayed_settlement,Probable Match
+INV-2026-0062,SET-2026-0062,BNK-2026-0062,delayed_settlement,Probable Match
+INV-2026-0063,SET-2026-0063,BNK-2026-0063,delayed_settlement,Probable Match
+INV-2026-0064,SET-2026-0064,BNK-2026-0064,delayed_settlement,Probable Match
+INV-2026-0065,SET-2026-0065,BNK-2026-0065,delayed_settlement,Probable Match
+INV-2026-0066,SET-2026-0066,BNK-2026-0066,delayed_settlement,Probable Match
+INV-2026-0067,SET-2026-0067,BNK-2026-0067,delayed_settlement,Probable Match
+INV-2026-0068,SET-2026-0068,BNK-2026-0068,partial_payment,Human Review
+INV-2026-0069,SET-2026-0069,BNK-2026-0069,partial_payment,Human Review
+INV-2026-0070,SET-2026-0070,BNK-2026-0070,partial_payment,Human Review
+INV-2026-0071,SET-2026-0071,BNK-2026-0071,partial_payment,Human Review
+INV-2026-0072,SET-2026-0072,BNK-2026-0072,partial_payment,Human Review
+INV-2026-0073,SET-2026-0073,BNK-2026-0073,partial_payment,Human Review
+INV-2026-0074,SET-2026-0074,BNK-2026-0074,partial_payment,Human Review
+INV-2026-0075,SET-2026-0075,BNK-2026-0075,partial_payment,Human Review
+INV-2026-0076,SET-2026-0076,BNK-2026-0076,partial_payment,Human Review
+INV-2026-0077,SET-2026-0077,BNK-2026-0077,partial_payment,Human Review
+INV-2026-0078,SET-2026-0078,BNK-2026-0078,refund,Human Review
+INV-2026-0079,SET-2026-0079,BNK-2026-0079,refund,Human Review
+INV-2026-0080,SET-2026-0080,BNK-2026-0080,refund,Human Review
+INV-2026-0081,SET-2026-0081,BNK-2026-0081,refund,Human Review
+INV-2026-0082,SET-2026-0082,BNK-2026-0082,refund,Human Review
+INV-2026-0083,SET-2026-0083,BNK-2026-0083,refund,Human Review
+INV-2026-0084,SET-2026-0084,BNK-2026-0084,refund,Human Review
+INV-2026-0085,SET-2026-0085,BNK-2026-0085,refund,Human Review
+INV-2026-0086,SET-2026-0086,BNK-2026-0086,duplicate_payment,Human Review
+INV-2026-0087,SET-2026-0088,BNK-2026-0088,duplicate_payment,Human Review
+INV-2026-0088,SET-2026-0090,BNK-2026-0090,duplicate_payment,Human Review
+INV-2026-0089,SET-2026-0092,BNK-2026-0092,duplicate_payment,Human Review
+INV-2026-0090,SET-2026-0094,BNK-2026-0094,duplicate_payment,Human Review
+INV-2026-0091,SET-2026-0096,BNK-2026-0096,duplicate_payment,Human Review
+INV-2026-0092,,,missing_settlement,Unresolved
+INV-2026-0093,,,missing_settlement,Unresolved
+INV-2026-0094,,,missing_settlement,Unresolved
+INV-2026-0095,,,missing_settlement,Unresolved
+INV-2026-0096,,,missing_settlement,Unresolved
+INV-2026-0097,,,missing_settlement,Unresolved
+INV-2026-0098,,,missing_settlement,Unresolved
+INV-2026-0099,,,missing_settlement,Unresolved
+INV-2026-0100,,,missing_settlement,Unresolved
+INV-2026-0101,,,missing_settlement,Unresolved
+INV-2026-0102,,,missing_settlement,Unresolved
+INV-2026-0103,,,missing_settlement,Unresolved
+INV-2026-0104,SET-2026-0098,BNK-2026-0098,incorrect_reference,Human Review
+INV-2026-0105,SET-2026-0099,BNK-2026-0099,incorrect_reference,Human Review
+INV-2026-0106,SET-2026-0100,BNK-2026-0100,incorrect_reference,Human Review
+INV-2026-0107,SET-2026-0101,BNK-2026-0101,incorrect_reference,Human Review
+INV-2026-0108,SET-2026-0102,BNK-2026-0102,incorrect_reference,Human Review
+INV-2026-0109,SET-2026-0103,BNK-2026-0103,incorrect_reference,Human Review
+INV-2026-0110,SET-2026-0104,BNK-2026-0104,incorrect_reference,Human Review
+INV-2026-0111,SET-2026-0105,BNK-2026-0105,amount_mismatch,Unresolved
+INV-2026-0112,SET-2026-0106,BNK-2026-0106,amount_mismatch,Unresolved
+INV-2026-0113,SET-2026-0107,BNK-2026-0107,amount_mismatch,Unresolved
+INV-2026-0114,SET-2026-0108,BNK-2026-0108,amount_mismatch,Unresolved
+INV-2026-0115,SET-2026-0109,BNK-2026-0109,amount_mismatch,Unresolved
+INV-2026-0116,SET-2026-0110,BNK-2026-0110,amount_mismatch,Unresolved
+INV-2026-0117,SET-2026-0111,BNK-2026-0111,ambiguous_match,Human Review
+INV-2026-0118,SET-2026-0112,BNK-2026-0112,ambiguous_match,Human Review
+INV-2026-0119,SET-2026-0113,BNK-2026-0113,ambiguous_match,Human Review
+INV-2026-0120,SET-2026-0114,BNK-2026-0114,ambiguous_match,Human Review
