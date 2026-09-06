@@ -100,7 +100,10 @@ def startup():
         logging.getLogger("reconai.startup").warning(f"Database initialization warning: {e}")
 
 
+@app.get("/")
 @app.get("/health")
+@app.get("/api/index.py")
+@app.get("/api/index.py/health")
 def root_health():
     return {"status": "ok"}
 
