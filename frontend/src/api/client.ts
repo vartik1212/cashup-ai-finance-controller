@@ -15,8 +15,11 @@ import type {
   AIExceptionAnalysis,
 } from '../types';
 
+const rawBase = (import.meta as any).env?.VITE_API_URL || (import.meta as any).env?.VITE_API_BASE_URL || '/api';
+const API_BASE = rawBase.replace(/\/+$/, '');
+
 export const apiClient = axios.create({
-  baseURL: '/api',
+  baseURL: API_BASE.endsWith('/api') ? API_BASE : (API_BASE === '' ? '/api' : `${API_BASE}/api`),
   timeout: 90000,
 });
 
@@ -112,15 +115,18 @@ export async function confirmUpload(payload: any): Promise<any> {
 }
 
 export function getExportResultsUrl(runId?: string): string {
-  return runId ? `/api/reports/export/results.csv?run_id=${runId}` : '/api/reports/export/results.csv';
+  const base = apiClient.defaults.baseURL || '/api';
+  return runId ? `${base}/reports/export/results.csv?run_id=${runId}` : `${base}/reports/export/results.csv`;
 }
 
 export function getExportExceptionsUrl(runId?: string): string {
-  return runId ? `/api/reports/export/exceptions.csv?run_id=${runId}` : '/api/reports/export/exceptions.csv';
+  const base = apiClient.defaults.baseURL || '/api';
+  return runId ? `${base}/reports/export/exceptions.csv?run_id=${runId}` : `${base}/reports/export/exceptions.csv`;
 }
 
 export function getExportRunReportUrl(runId?: string): string {
-  return runId ? `/api/reports/export/run_report.json?run_id=${runId}` : '/api/reports/export/run_report.json';
+  const base = apiClient.defaults.baseURL || '/api';
+  return runId ? `${base}/reports/export/run_report.json?run_id=${runId}` : `${base}/reports/export/run_report.json`;
 }
 
 export async function fetchResultByInvoice(
