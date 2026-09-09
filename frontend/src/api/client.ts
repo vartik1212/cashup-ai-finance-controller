@@ -1,3 +1,4 @@
+
 // CashUP - API Client for FastAPI backend
 
 import axios from 'axios';
@@ -15,13 +16,42 @@ import type {
   AIExceptionAnalysis,
 } from '../types';
 
-const rawBase = (import.meta as any).env?.VITE_API_URL || (import.meta as any).env?.VITE_API_BASE_URL || '/api';
-const API_BASE = rawBase.replace(/\/+$/, '');
+export function getApiBaseUrl(): string {
+  if (typeof window !== 'undefined') {
+    const saved = localStorage.getItem('cashup_api_url');
+    if (saved && saved.trim()) {
+      return saved.trim();
+    }
+  }
+  const envUrl = (import.meta as any).env?.VITE_API_URL || (import.meta as any).env?.VITE_API_BASE_URL;
+  return envUrl ? String(envUrl).trim() : '/api';
+}
+
+export function formatApiBase(rawUrl: string): string {
+  const trimmed = (rawUrl || '').trim().replace(/\/+$/, '');
+  if (!trimmed || trimmed === '/api') return '/api';
+  return trimmed.endsWith('/api') ? trimmed : `${trimmed}/api`;
+}
 
 export const apiClient = axios.create({
-  baseURL: API_BASE.endsWith('/api') ? API_BASE : (API_BASE === '' ? '/api' : `${API_BASE}/api`),
+  baseURL: formatApiBase(getApiBaseUrl()),
   timeout: 90000,
 });
+
+export function setApiBaseUrl(url: string): string {
+  const cleaned = (url || '').trim();
+  if (typeof window !== 'undefined') {
+    if (cleaned && cleaned !== '/api') {
+      localStorage.setItem('cashup_api_url', cleaned);
+    } else {
+      localStorage.removeItem('cashup_api_url');
+    }
+  }
+  const formatted = formatApiBase(cleaned || getApiBaseUrl());
+  apiClient.defaults.baseURL = formatted;
+  return formatted;
+}
+
 
 export async function checkHealth(): Promise<HealthResponse> {
   const { data } = await apiClient.get('/health');

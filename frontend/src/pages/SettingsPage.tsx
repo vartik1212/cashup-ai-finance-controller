@@ -1,17 +1,125 @@
-// Settings Page — stub for configuration
-
-import React from 'react';
-import { Settings, Key, Database, Info } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Settings, Key, Database, Info, Server, CheckCircle2, XCircle, Loader2 } from 'lucide-react';
 import { useApp } from '../store/AppContext';
+import { apiClient, getApiBaseUrl, setApiBaseUrl, checkHealth } from '../api/client';
 
 export function SettingsPage() {
-  const { aiAvailable, dataStatus } = useApp();
+  const { aiAvailable, dataStatus, refreshDataStatus } = useApp();
+  const [apiUrlInput, setApiUrlInput] = useState(getApiBaseUrl());
+  const [activeBase, setActiveBase] = useState(apiClient.defaults.baseURL || '/api');
+  const [testStatus, setTestStatus] = useState<'idle' | 'testing' | 'success' | 'error'>('idle');
+  const [testMessage, setTestMessage] = useState<string | null>(null);
+
+  useEffect(() => {
+    setActiveBase(apiClient.defaults.baseURL || '/api');
+  }, []);
+
+  const handleSaveAndTest = async () => {
+    setTestStatus('testing');
+    setTestMessage(null);
+    try {
+      const newBase = setApiBaseUrl(apiUrlInput);
+      setActiveBase(newBase);
+      const health = await checkHealth();
+      setTestStatus('success');
+      setTestMessage(`Connected successfully! Server version: ${health.version || 'ok'}`);
+      await refreshDataStatus();
+    } catch (err: any) {
+      setTestStatus('error');
+      setTestMessage(
+        err?.message || 'Could not connect to backend. Please check the URL or wait for Render cold start.'
+      );
+    }
+  };
+
+  const handleResetDefault = () => {
+    setApiBaseUrl('');
+    setApiUrlInput(getApiBaseUrl());
+    setActiveBase(apiClient.defaults.baseURL || '/api');
+    setTestStatus('idle');
+    setTestMessage(null);
+  };
 
   return (
     <div className="p-6 max-w-2xl space-y-6">
       <div>
         <h1 className="text-lg font-semibold text-slate-100 mb-1">Settings</h1>
         <p className="text-xs text-slate-500">System configuration and status.</p>
+      </div>
+
+      {/* Backend API Connection */}
+      <div className="bg-slate-800/40 border border-slate-700/50 rounded-lg p-5">
+        <div className="flex items-center gap-2 mb-4">
+          <Server size={14} className="text-indigo-400" />
+          <div className="text-xs font-semibold text-slate-300 uppercase tracking-widest">
+            Backend API Connection
+          </div>
+        </div>
+
+        <div className="space-y-3">
+          <div className="flex items-center justify-between text-xs">
+            <span className="text-slate-400">Active Base URL:</span>
+            <span className="font-mono text-indigo-300 bg-slate-900/60 px-2 py-0.5 rounded border border-slate-700/50">
+              {activeBase}
+            </span>
+          </div>
+
+          <div>
+            <label className="text-xs font-medium text-slate-300 mb-1.5 block">
+              Backend Service URL (Render)
+            </label>
+            <div className="flex items-center gap-2">
+              <input
+                type="text"
+                value={apiUrlInput}
+                onChange={e => setApiUrlInput(e.target.value)}
+                placeholder="https://your-app.onrender.com"
+                className="flex-1 bg-slate-900/80 border border-slate-700/80 rounded px-3 py-2 text-xs font-mono text-slate-200 placeholder-slate-600 focus:outline-none focus:border-indigo-500"
+              />
+              <button
+                onClick={handleSaveAndTest}
+                disabled={testStatus === 'testing'}
+                className="px-3 py-2 rounded bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold flex items-center gap-1.5 transition-colors disabled:opacity-50"
+              >
+                {testStatus === 'testing' ? (
+                  <Loader2 size={13} className="animate-spin" />
+                ) : (
+                  <Server size={13} />
+                )}
+                Connect & Test
+              </button>
+            </div>
+            <p className="text-[11px] text-slate-500 mt-1">
+              Enter your live Render backend URL. Saved in your browser so you don't need to rebuild Vercel preview deploys.
+            </p>
+          </div>
+
+          {testMessage && (
+            <div
+              className={`p-2.5 rounded border text-xs flex items-center gap-2 ${
+                testStatus === 'success'
+                  ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-400'
+                  : 'bg-rose-500/10 border-rose-500/30 text-rose-400'
+              }`}
+            >
+              {testStatus === 'success' ? (
+                <CheckCircle2 size={14} className="flex-shrink-0" />
+              ) : (
+                <XCircle size={14} className="flex-shrink-0" />
+              )}
+              <span>{testMessage}</span>
+            </div>
+          )}
+
+          {apiUrlInput !== '/api' && (
+            <button
+              onClick={handleResetDefault}
+              className="text-[11px] text-slate-500 hover:text-slate-400 underline"
+            >
+              Reset to default (/api or VITE_API_URL)
+            </button>
+          )}
+        </div>
       </div>
 
       {/* AI Configuration */}

@@ -18,7 +18,7 @@ import {
   Database,
   RefreshCw,
 } from 'lucide-react';
-import { uploadAndProfile, confirmUpload } from '../../api/client';
+import { uploadAndProfile, confirmUpload, apiClient } from '../../api/client';
 import type {
   FileProfile,
   CanonicalFieldDef,
@@ -229,7 +229,12 @@ export const CSVUploadModal: React.FC<CSVUploadModalProps> = ({
       setActiveFileIndex(0);
       setStep('inspect');
     } catch (err: any) {
-      setError(err?.response?.data?.detail || err.message || 'Profiling failed.');
+      let msg = err?.response?.data?.detail || err.message || 'Profiling failed.';
+      const currentBase = apiClient.defaults.baseURL || '';
+      if (err?.response?.status === 404 && (currentBase === '/api' || !currentBase.startsWith('http'))) {
+        msg = `Backend unreachable (404 Not Found). The frontend is sending requests to "${currentBase}" on Vercel instead of your deployed Render backend. Please set VITE_API_URL in your Vercel project settings or configure the Backend URL in Settings.`;
+      }
+      setError(msg);
     } finally {
       setIsLoading(false);
     }
